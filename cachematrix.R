@@ -37,7 +37,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve: This function computes the inverse of the special "matrix" returned by makeCacheMatrix() function above.
 # If the inverse has already been calculated (and the matrix has not changed),
-# then the cacheSolve() would retrieve the inverse from the cache via getMatInv() function and skips the computation.
+# then cacheSolve() would retrieve the inverse from the cache via getMatInv() function and skips the computation.
 # Otherwise, it computes the inverse of the special "matrix" data and sets the value of the matrix-inverse in the cache
 # via the setMatInv() function.
 
@@ -133,7 +133,9 @@ cacheSolve <- function(x, ...) {
 # mMat$getMatInv() # existing Matrix-Inverse is reset to NULL
 # # NULL
 #
-# cSmMat3 <- cacheSolve(mMat) # when cacheSolve of mMat is called after the resetting the matrix, the Matrix-Inverse which no longer exist now needs to be solved
+# cSmMat3 <- cacheSolve(mMat)
+# when cacheSolve of mMat is called after the resetting the matrix,
+# the Matrix-Inverse which no longer exist now needs to be solved
 # cSmMat3
 # # [,1]   [,2]
 # # [1,] -0.50  0.375
